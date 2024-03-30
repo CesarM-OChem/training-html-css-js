@@ -13,5 +13,5 @@
 </div>
 
 <hr>
-<p align='center'>Developed in Brasil <img height=12 src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png'></p>
+<p align='center'>Developed in Brazil <img height=12 src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png'></p>
 <hr>
