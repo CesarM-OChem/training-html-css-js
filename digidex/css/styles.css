@@ -7,6 +7,14 @@
     background-color: brown;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cria colunas automáticas com no mínimo 200px */
+    gap: 10px; /* Espaçamento entre os itens */
+    justify-items: center; /* Centraliza os itens na horizontal */
+    align-items: center; /* Centraliza os itens na vertical */
+}
+
 #logo {
     font-family: 'DigimonBasic', sans-serif;
     font-style: italic;

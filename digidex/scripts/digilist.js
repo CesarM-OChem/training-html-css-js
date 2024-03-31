@@ -1,5 +1,6 @@
 let listButton = document.getElementById('listButton');
 let names = [];
+listDigimons();
 
 async function listDigimons(){
     let request = await fetch('https://digimon-api.vercel.app/api/digimon');
@@ -16,15 +17,18 @@ async function listDigimons(){
         names[results_index] = {name: element.name, img: element.img};
     });
 
+    let gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid-container');
+
+    // Adicionar o contêiner da grade à página
+    listButton.appendChild(gridContainer);
+
     names.forEach(element => {
         let p = document.createElement('p');
         p.innerHTML = `
-            <p>
-                <button>${element.name}</button>
-            </p>
+            <a href="./digiinfo.html?name=${element.name}"><button>${element.name}</button></a>
         `;
 
-        listButton.appendChild(p);
+        gridContainer.appendChild(p);
     });
-    
 }
