@@ -25,8 +25,19 @@ async function listDigimons(){
 
     names.forEach(element => {
         let p = document.createElement('p');
+        
         p.innerHTML = `
-            <a href="./digiinfo.html?name=${element.name}"><button>${element.name}</button></a>
+            <p class="optionsBox">
+                <a class="styleLink" href="./digiinfo.html?name=${element.name}">
+                    <br>
+                    <span>${element.name}</span>
+                    <br>
+                    <br>
+                    <br>
+                    <img class="imageBorder" src="${element.img}">
+                    <br>
+                </a>
+            </p> 
         `;
 
         gridContainer.appendChild(p);
