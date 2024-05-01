@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Thug';
+    src: url('./font/Thug-G3aa.ttf');
+}
+
+body {
+    font-family: Thug;
+}
+
+h1 {
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    font-family: 'Thug';
+}
+
+span {
+    font-size: 50px;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
