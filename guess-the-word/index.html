@@ -9,19 +9,25 @@
 <body>
     <header>
         <h1>Guess the Word!</h1>
-        <button id="generateWord">GENERATE NEW</button>
+        <div id="buttonBox">
+            <button onclick="getWords()" id="generateWord">GENERATE NEW</button>
+        </div>
     </header>
 
-    <div>
-        <span id="sp1">*</span>
-        <span id="sp2">*</span>
-        <span id="sp3">*</span>
-        <span id="sp4">*</span>
-        <span id="sp5">*</span>
-        <br>
-        <br>
-        <input id="entry" type="text">
-        <button onclick="verifyLetter()">GUESS</button>
+    <div id="messageContainer"></div>
+    
+    <div id="wordBox">
+        <div>
+            <span id="sp0">*</span>
+            <span id="sp1">*</span>
+            <span id="sp2">*</span>
+            <span id="sp3">*</span>
+            <span id="sp4">*</span>
+            <br>
+            <br>
+        </div>
+        <input class="entry" id="entry" type="text">
+        <button class="entry" onclick="verifyLetter()">GUESS</button>
     </div>
     
     <script src="script.js"></script>
