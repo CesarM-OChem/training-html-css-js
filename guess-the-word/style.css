@@ -4,59 +4,110 @@
 }
 
 body {
+    font-size: 30px;
     font-family: Thug;
+    background-color: #4b4c7d;
+    color: #1b212e;
 }
 
 h1 {
-    font-size: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    
 }
 
 button {
     font-family: 'Thug';
-    font-size: 45px;
+    font-size: 30px;
+    border-width:1px;
+    color:#fff;
+    border-color:#1f2f47;
+    border-top-left-radius:17px;
+    border-top-right-radius:17px;
+    border-bottom-left-radius:17px;
+    border-bottom-right-radius:17px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+    text-shadow:inset 0px 1px 0px #263666;
+    background:linear-gradient(#2e466e, #415989);
 }
 
-span {
-    font-size: 50px;
+button:hover {
+    background: linear-gradient(#415989, #2e466e);
 }
 
 .entry {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     display: block;
-    width: 100px;
-    height: 70px;
-    font-size: 30px;
+    width: 70px;
+    font-size: 25px;
 }
 
 #messageContainer {
     position: absolute;
-    top: 37%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #114232;
+}
+
+#remainingGuesses {
+    position: absolute;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
-    color: green;
 }
 
 #wordBox {
+    font-size: 35px;
     position: absolute;
-    top: 60%;
+    top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #buttonBox {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 30px;
 }
 
 #entry {
     text-align: center;
-    width:70px;
+    width: 40px;
+    height: 40px;
+    background-color: #61729c;
+}
+
+#usedLettersTitle {
+    font-size: 20px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#usedLetters {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
