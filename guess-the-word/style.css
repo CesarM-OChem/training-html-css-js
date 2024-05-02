@@ -85,9 +85,14 @@ button:hover {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    text-align: center;
+}
+
+#typeLetter {
+    font-size: 15px;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #entry {
