@@ -31,8 +31,6 @@ async function getWords(){
             guess = 8
             document.getElementById('entry').disabled = false
             clearEntry()
-
-            console.log(word)
         }else{
             alert("Error getting list of words")
         }
