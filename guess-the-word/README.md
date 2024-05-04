@@ -17,8 +17,8 @@ to consume data from a raw .txt file and use some basic functions to randomly ch
 # 📸 Screenshots 📸
 
 * ## Home Page:
-<img height='600px' src="guess-the-word/images/screenshot01.png" alt="screenshot01">
+<img height='600px' src="./images/screenshot01.png" alt="screenshot01">
 <br>
 
-<img height='600px' src="guess-the-word/images/screenshot02.png" alt="screenshot02">
+<img height='600px' src="./images/screenshot02.png" alt="screenshot02">
 <br>
