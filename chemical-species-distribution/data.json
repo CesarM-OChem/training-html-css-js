@@ -1,0 +1,50 @@
+[
+    {
+        "compost": "Acetic Acid",
+        "protonNumber": 1,
+        "species": ["HAc", "Ac-"],
+        "pKa": [4.76]
+    },
+
+    {
+        "compost": "Formic Acid",
+        "protonNumber": 1,
+        "species": ["HCO2H", "HCO2-"],
+        "pKa": [3.75]
+    },
+
+    {
+        "compost": "Citric Acid",
+        "protonNumber": 3,
+        "species": ["H3Cit", "H2Cit-", "HCit2-", "Cit3-"],
+        "pKa": [3.13, 4.76, 6.4]
+    },
+
+    {
+        "compost": "",
+        "protonNumber": 0,
+        "species": [""],
+        "pKa": [0]
+    },
+
+    {
+        "compost": "",
+        "protonNumber": 0,
+        "species": [""],
+        "pKa": [0]
+    },
+
+    {
+        "compost": "",
+        "protonNumber": 0,
+        "species": [""],
+        "pKa": [0]
+    },
+
+    {
+        "compost": "",
+        "protonNumber": 0,
+        "species": [""],
+        "pKa": [0]
+    }
+]

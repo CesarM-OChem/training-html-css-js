@@ -39,14 +39,14 @@ selectCompost.addEventListener('change', () => {
             labels: graphData.pHList,
             datasets: [
                 {
-                    label: replaceChar(composts[selectedCompost].a0),
+                    label: composts[selectedCompost].a0,
                     data: graphData.alpha0List,
                     borderColor: 'blue',
                     fill: false
                 },
                 //New species datasets
                 {
-                    label: replaceChar(composts[selectedCompost].a1),
+                    label: composts[selectedCompost].a1,
                     data: graphData.alpha1List,
                     borderColor: 'red',
                     fill: false
@@ -80,6 +80,4 @@ function calculateGraphData(compost, pKa){
     }
 }
 
-function replaceChar(formula){
-    return formula.replace(2, '₂').replace(3, '₃').replace(4, '₄').replace(5, '₅').replace(6, '₆').replace(7, '₇').replace(8, '₈').replace(9, '₉').replace(/\-/g, '⁻').replace(/\+/g, '⁺')
-}
+//₂₃₄₅₆₇₈₉⁻⁺
