@@ -6,13 +6,12 @@
     <title>Chemical Species Distribution</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <label for="Compost">Compost</label>
+<body onload="getData()">
+    <label for="compost">Compost</label>
     <select id="compost">
         <option value="" disabled selected>Select a compost</option>
-        <option value="acetic acid">acetic acid</option>
-        <option value="formic acid">formic acid</option>
     </select>
+    <label for=""></label>
 
     <div>
         <canvas width="600px" height="400px" id="grafico"></canvas>
