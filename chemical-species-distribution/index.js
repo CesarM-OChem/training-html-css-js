@@ -6,6 +6,12 @@ const colorList = ['blue', 'red', 'green', 'yellow', 'purple', 'black', 'pink', 
 async function getData(){
     let request = await fetch("https://raw.githubusercontent.com/CesarM-OChem/training-html-css-js/main/chemical-species-distribution/data.json")
     let response = await request.json()
+    
+    // Sort list based on the name of the composts
+    response.sort(function(a, b) {
+        return a.compost < b.compost ? -1: a.compost > b.compost ? 1 : 0
+    })
+
     response.forEach(element => {
         composts.push(element)
         let option = document.createElement('option')
@@ -98,4 +104,4 @@ function sumExpTen(index, pH, pKa){
     return Math.pow(10, exp)
 }
 
-//₂₃₄₅₆₇₈₉⁻⁺
+//₂₃₄₅₆₇₈₉⁻⁺²³⁴⁵⁶⁷⁸⁹
