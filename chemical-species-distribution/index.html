@@ -7,16 +7,19 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body onload="getData()">
-    <label for="compost">Compost</label>
+    <label for="compost">Select a compost:</label>
     <select id="compost">
         <option value="" disabled selected>Select a compost</option>
     </select>
-    <label for=""></label>
+    <span style="color: transparent">----</span> or <span style="color: transparent">----</span>
+    <label for="">Enter your own data:</label>
+    <a href="insertData.html"><button id="newData">New Data</button></a>
+    <hr>
 
     <div>
         <canvas width="600px" height="400px" id="grafico"></canvas>
     </div>
 
-    <script src="index.js"></script>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 </html>
