@@ -3,69 +3,79 @@
         "compost": "Acetic Acid",
         "protonNumber": 1,
         "species": ["HAc", "Ac⁻"],
-        "pKa": [4.76]
+        "pKa": [4.76],
+        "charges": [0, -1]
     },
 
     {
         "compost": "Formic Acid",
         "protonNumber": 1,
         "species": ["HCO₂H", "HCO₂⁻"],
-        "pKa": [3.75]
+        "pKa": [3.75],
+        "charges": [0, -1]
     },
 
     {
         "compost": "Citric Acid",
         "protonNumber": 3,
         "species": ["H₃Cit", "H₂Cit⁻", "HCit²⁻", "Cit³⁻"],
-        "pKa": [3.13, 4.76, 6.4]
+        "pKa": [3.13, 4.76, 6.4],
+        "charges": [0, -1, -2, -3]
     },
 
     {
         "compost": "Benzoic Acid",
         "protonNumber": 1,
         "species": ["HBz", "Bz⁻"],
-        "pKa": [4.204]
+        "pKa": [4.204],
+        "charges": [0, -1]
     },
 
     {
         "compost": "Carbonic Acid",
         "protonNumber": 2,
         "species": ["H₂CO₃", "HCO₃⁻", "CO₃²⁻"],
-        "pKa": [6.352, 10.329]
+        "pKa": [6.352, 10.329],
+        "charges": [0, -1, -2]
     },
 
     {
         "compost": "Chlorous Acid",
         "protonNumber": 1,
         "species": ["HClO₂", "ClO₂⁻"],
-        "pKa": [1.95]
+        "pKa": [1.95],
+        "charges": [0, -1]
     },
 
     {
         "compost": "Oxalic Acid",
         "protonNumber": 2,
         "species": ["H₂C₂O₄", "HC₂O₄⁻", "C₂O₄²⁻"],
-        "pKa": [1.271, 4.266]
+        "pKa": [1.271, 4.266],
+        "charges": [0, -1, -2]
     },
 
     {
         "compost": "Phosphoric Acid",
         "protonNumber": 3,
         "species": ["H₃PO₄", "H₂PO₄⁻", "HPO₄²⁻", "PO₄³⁻"],
-        "pKa": [1.959, 7.125, 12.23]
+        "pKa": [1.959, 7.125, 12.23],
+        "charges": [0, -1, -2, -3]
     },
 
     {
         "compost": "Sulfuric Acid",
         "protonNumber": 2,
         "species": ["H₂SO₄", "HSO₄⁻", "SO₄²⁻"],
-        "pKa": [-3, 1.921]
+        "pKa": [-3, 1.921],
+        "charges": [0, -1, -2]
     },
 
     {
         "compost": "EDTA",
         "protonNumber": 6,
         "species": ["H₆EDTA²⁺", "H₅EDTA⁺", "H₄EDTA", "H₃EDTA⁻", "H₂EDTA²⁻", "HEDTA³⁻", "EDTA⁴⁻"],
-        "pKa": [0, 1.5, 2, 2.678, 6.161, 10.26]
+        "pKa": [0, 1.5, 2, 2.678, 6.161, 10.26],
+        "charges": [2, 1, 0, -1, -2, -3, -4]
     }
 ]
