@@ -1,8 +1,9 @@
-import { calculateGraphData, printGraph } from "./alphaFunctions.js"
+import { calculateGraphData, printAlphaGraph, printEffectiveCharge, charges } from "./alphaFunctions.js"
 
 let composts = []
 let compostList = document.getElementById('compost')
-let chart = null
+let chartAlpha = null
+let chartCharge = null
 
 window.getData = getData
 
@@ -34,10 +35,12 @@ selectCompost.addEventListener('change', () => {
     const pKa = properties[0].pKa
     const protons = properties[0].protonNumber
     const species = properties[0].species
+    const higherCharge = properties[0].charges[0]
+    const indexHigherCharge = charges.indexOf(higherCharge)
+    
     // calculate the concentrations using pka
-    const graphData = calculateGraphData(pKa, protons)
+    const graphData = calculateGraphData(pKa, protons, indexHigherCharge)
 
-    printGraph(graphData, protons, species)
+    printAlphaGraph(graphData, protons, species)
+    printEffectiveCharge(graphData)
 })
-
-//₂₃₄₅₆₇₈₉⁻⁺²³⁴⁵⁶⁷⁸⁹

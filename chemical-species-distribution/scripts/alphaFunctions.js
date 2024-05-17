@@ -1,11 +1,12 @@
-
+export const charges = [4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6]
 const points = 141
 const colorList = ['blue', 'red', 'green', 'yellow', 'purple', 'black', 'pink', 'gray']
-let chart = null
+let chartAlpha = null
 
-export function calculateGraphData(pKa, protons){
+export function calculateGraphData(pKa, protons, indexHigherCharge){
     let pHList = new Array(points)
     let alphaList = Array.from({length: (protons + 1)}, () => new Array(points))
+    let effectiveCharges = new Array(points).fill(0)
     let pH = -0.1
 
     for (let i = 0; i < points; i++){
@@ -25,9 +26,16 @@ export function calculateGraphData(pKa, protons){
         }
     }
 
+    for(let i = 0; i < points; i++){
+        for(let j = 0; j <= protons; j++){
+            effectiveCharges[i] += (charges[j + indexHigherCharge] * alphaList[j][i])
+        }
+    }
+
     return {
         pHList,
-        alphaList
+        alphaList,
+        effectiveCharges
     }
 }
 
@@ -40,12 +48,11 @@ function sumExpTen(index, pH, pKa){
     return Math.pow(10, exp)
 }
 
-export function printGraph(graphData, protons, species){
-    const canvas = document.getElementById('grafico')
-    const ctx = canvas.getContext('2d')
+export function printAlphaGraph(graphData, protons, species){
+    const canvas = document.getElementById('graphAlpha')
 
-    if(window.chart){
-        window.chart.destroy()
+    if(window.chartAlpha){
+        window.chartAlpha.destroy()
     }
 
     // create graph with Chart.js
@@ -65,11 +72,37 @@ export function printGraph(graphData, protons, species){
         dataset.push(dataObject)
     }
 
-    window.chart = new Chart(canvas, {
+    window.chartAlpha = new Chart(canvas, {
         type: 'line',
         data: {
             labels: graphData.pHList,
             datasets: dataset
+        },
+        options: chartOptions
+    })
+}
+
+export function printEffectiveCharge(graphData){
+    const canvas = document.getElementById('graphCharge')
+    
+    if(window.chartCharge){
+        window.chartCharge.destroy()
+    }
+
+    var chartOptions = {
+        responsive: false
+    }
+
+    window.chartCharge = new Chart(canvas, {
+        type: 'line',
+        data:{
+            labels: graphData.pHList,
+            datasets:[{
+                label: "Effective Charge",
+                data: graphData.effectiveCharges,
+                borderColor: "black",
+                fill: false
+            }]
         },
         options: chartOptions
     })
