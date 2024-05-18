@@ -1,0 +1,37 @@
+body {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,0.35) 0%, rgba(9,9,121,0.35) 50%, rgba(0,212,255,0.35) 100%);
+}
+
+select, button {
+    background-color: transparent;
+}
+
+select option {
+    background-color: rgba(0,212,255,0.35)
+}
+
+input {
+    width: 50px;
+    background-color: transparent;
+}
+
+.mainWrapper {
+    display: flex;
+    flex-wrap: row;
+}
+
+.canvasWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas {
+    margin: 10px;
+    background-color: rgba(46, 178, 255, 0.25);
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+}

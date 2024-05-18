@@ -25,7 +25,7 @@ function generateField(){
     for(let i = 0; i < protons; i++){
         let content = document.createElement('span')
         content.innerHTML = `
-                      <label>pK${i + 1}</label>
+                      <label>pK<sub>${i + 1}</sub></label>
                       <input type="text" id="pK${i + 1}"><span style="color: transparent">---</span>
                   `
         alphaField.appendChild(content)
@@ -33,8 +33,8 @@ function generateField(){
 
     let selectCharge = document.createElement('span')
     selectCharge.innerHTML = `
-                                  <br>
-                                  <label for="charge">Charge of the most protonated species</label>
+                                  
+                                  <label for="charge"><b>Charge of the most protonated species</b></label>
                                   <select id="charge"></select>
                              `
 
@@ -47,6 +47,8 @@ function generateField(){
         optionList.appendChild(option)
     }
     
+    // Select charge zero as default
+    optionList.selectedIndex = 4
 
     document.getElementById('pK1').focus()
     let newButton = document.createElement('span')

@@ -57,7 +57,21 @@ export function printAlphaGraph(graphData, protons, species){
 
     // create graph with Chart.js
     var chartOptions = {
-        responsive: false
+        responsive: false,
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'pH'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Alpha'
+                }
+            }
+        }
     }
 
     var dataset = []
@@ -90,7 +104,21 @@ export function printEffectiveCharge(graphData){
     }
 
     var chartOptions = {
-        responsive: false
+        responsive: false,
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'pH'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Effective Charge'
+                }
+            }
+        }
     }
 
     window.chartCharge = new Chart(canvas, {

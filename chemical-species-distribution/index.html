@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemical Species Distribution</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 <body onload="getData()">
-    <label for="compost">Select a compost:</label>
+    <a href="index.html"><button>Home</button></a>
+    <div id="title">
+        <h2>Especies Distribution Diagram (EDD)</h2>
+        <span style="color: transparent">---</span>
+        <img width="75px" src="./images/logo.png" alt="alphaImage">
+    </div>
+    <hr>
+
+    <label for="compost"><b>Select a compost:</b></label>
     <select id="compost">
-        <option value="" disabled selected>Select a compost</option>
+        <option value="" disabled selected>Compost</option>
     </select>
-    <span style="color: transparent">----</span> or <span style="color: transparent">----</span>
-    <label for="">Enter your own data:</label>
+    <span style="color: transparent">----</span><b> or </b><span style="color: transparent">----</span>
+    <label for=""><b>Enter your own data:</b></label>
     <a href="insertData.html"><button id="newData">New Data</button></a>
     <hr>
 
-    <div>
-        <canvas width="600px" height="400px" id="graphAlpha"></canvas>
-        <canvas width="600px" height="400px" id="graphCharge"></canvas>
+    <div class="mainWrapper">
+        <div class="canvasWrapper">
+            <span><b>Alpha Distribution Graph</b></span>
+            <canvas class="canvas" width="600px" height="400px" id="graphAlpha"></canvas>
+        </div>
+        
+        <div class="canvasWrapper">
+            <span><b>Effective Charge Graph</b></span>
+            <canvas class="canvas" width="600px" height="400px" id="graphCharge"></canvas>
+        </div>
     </div>
+    
+    <footer>
+        Developed by: Cesar Macedo de Oliveira
+        <a href="https://www.linkedin.com/in/cesar-macedo-chemist/"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+        <a href="https://github.com/CesarM-OChem"><i class="fa fa-github" style="font-size:24px"></i></a>
+    </footer>
 
     <script type="module" src="scripts/index.js"></script>
 </body>
